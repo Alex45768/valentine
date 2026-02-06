@@ -66,14 +66,20 @@
             text-transform: uppercase;
         }
 
-        /* NEW GIF STYLING */
-        .gif-container img {
+        /* GIF STYLING */
+        .gif-container {
             width: 200px;
             height: 200px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .gif-container img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             border-radius: 50%;
             box-shadow: 0 0 60px rgba(255, 105, 180, 0.6); /* Pink Nebula Glow */
-            margin-bottom: 30px;
             border: 3px solid rgba(255, 255, 255, 0.8);
             animation: float 6s ease-in-out infinite;
         }
@@ -283,7 +289,11 @@
 
     <div id="hero-section">
         <div class="gif-container">
-            <img src="https://media.tenor.com/I7kd00u9kC0AAAAi/mocha-bear-hearts.gif" alt="Cute Bear">
+            <img 
+                src="bear.gif" 
+                onerror="this.src='https://i.pinimg.com/originals/f6/a7/69/f6a76906236b2f6723b7e7215444b726.gif'; this.onerror=null;" 
+                alt="Cute Bear"
+            >
         </div>
         <h1>Mila, will you be my Valentine?</h1>
         <p class="subtitle">My beautiful Amor... 🌹</p>
@@ -445,7 +455,7 @@
             mouseY = e.clientY;
             // Add stardust trail on move
             if (currentMode === 'stars') {
-                for(let i=0; i<2; i++) particles.push(new Stardust(mouseX, mouseY));
+                for(let i=0; i<3; i++) particles.push(new Stardust(mouseX, mouseY));
             }
         });
 
