@@ -12,7 +12,7 @@
             padding: 0;
             font-family: 'Poppins', sans-serif;
             color: white;
-            /* DEEP GALAXY BACKGROUND */
+            /* DEEP SPACE BACKGROUND */
             background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
             height: 100vh;
             width: 100vw;
@@ -283,7 +283,7 @@
 
     <div id="hero-section">
         <div class="gif-container">
-            <img src="https://media.giphy.com/media/InNkwCTY1X7Ko/giphy.gif" alt="Cute Bear">
+            <img src="https://media.tenor.com/I7kd00u9kC0AAAAi/mocha-bear-hearts.gif" alt="Cute Bear">
         </div>
         <h1>Mila, will you be my Valentine?</h1>
         <p class="subtitle">My beautiful Amor... 🌹</p>
@@ -378,7 +378,6 @@
         });
 
         // --- 3. TYPEWRITER EFFECT ---
-        // !!! EDIT YOUR MESSAGE HERE !!!
         const fullText = "My Dearest Mila,\n\nI am so incredibly glad to have you in my life. You are my Amor, my happiness, and my everything.\n\nFrom the moment I met you, my life became brighter. Every laugh, every smile, and every moment we share is a memory I treasure.\n\nThank you for being you. I love you more than words can explain.\n\nForever yours,\nYour Valentine";
         
         function openLetter() {
@@ -514,8 +513,9 @@
             }
         }
 
-        // INIT STARS (Milky Way Density)
-        for(let i=0; i<300; i++) particles.push(new Star());
+        // INIT STARS (DENSE MILKY WAY)
+        // INCREASED TO 1000 STARS
+        for(let i=0; i<1000; i++) particles.push(new Star());
 
         // ANIMATION LOOP
         function animate() {
@@ -539,7 +539,7 @@
                     }
                 }
                 // Maintain star count
-                if (particles.filter(p => p instanceof Star).length < 300) {
+                if (particles.filter(p => p instanceof Star).length < 1000) {
                     particles.push(new Star());
                 }
             } else {
